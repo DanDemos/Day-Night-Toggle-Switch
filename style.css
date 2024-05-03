@@ -3,8 +3,16 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-   background-color: #d1d8e8;
+/*   background-color: #d1d8e8;*/
+    background-color: #739ABA;
+    transition: background-color 0.7s ease-in-out;
 }
+
+body:has(.switch input:checked ) { 
+   background-color: #4A4D56;
+    transition: background-color 0.7s ease-in-out;
+}
+
 .switch label {
    height: 110px;
    width: 270px;
@@ -191,6 +199,7 @@ body {
     position: absolute;
     top: 15%;
     left: 22%;
+    animation: twinkle1 1s infinite;
 }
 
 .star-2 {
@@ -223,6 +232,7 @@ body {
     position: absolute;
     top: 80%;
     left: 13%;
+    animation: twinkle2 1s infinite;
 }
 
 .star-6 {
@@ -247,6 +257,7 @@ body {
     position: absolute;
     top: 51%;
     left: 42%;
+    animation: twinkle4 1s infinite;
 }
 
 .star-9 {
@@ -255,6 +266,7 @@ body {
     position: absolute;
     top: 72%;
     left: 45%;
+    animation: twinkle3 1s infinite;
 }
 
 .star-10 {
@@ -362,4 +374,21 @@ body {
     left: 80%;
     box-shadow: inset 1px 2px 1px #87899d;
     transform: translate(-80%, -70%);
+}
+
+@keyframes twinkle1 {
+  77% {opacity: 0;}
+}
+
+@keyframes twinkle2 {
+  51% {opacity: 0;}
+}
+
+@keyframes twinkle3 {
+  23% {opacity: 0;}
+}
+
+
+@keyframes twinkle4 {
+  91% {opacity: 0;}
 }
